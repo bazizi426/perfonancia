@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1300px) and (min-width: 720px) {
+	#fwslider .title {
+	    font-size: 26px;
+	}
+}
+
+
+#fwslider .slidePrev span {
+    background-image: url("../img/arrows.png");
+    width: 45px;
+    height: 45px;
+    float: left;
+    background-position: -10% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+
+#fwslider .slidePrev span {
+    background-image: url("../img/arrows.png");
+    width: 45px;
+    height: 45px;
+    float: left;
+    background-position: -10% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
