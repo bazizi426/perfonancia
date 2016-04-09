@@ -476,3 +476,11 @@ span.review-img2 {
         width: auto;
     }
 }
+
+h4.title {
+    /*font-family: Arial;*/
+    font-size: 1.2em !important;
+}
+p.description{
+    font-size: 0.8em !important;
+}
