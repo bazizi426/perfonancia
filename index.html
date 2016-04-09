@@ -25,6 +25,14 @@
 
 <body>
 
+<div class="loading">
+	<div class="sk-folding-cube">
+	  <div class="sk-cube1 sk-cube"></div>
+	  <div class="sk-cube2 sk-cube"></div>
+	  <div class="sk-cube4 sk-cube"></div>
+	  <div class="sk-cube3 sk-cube"></div>
+	</div>
+</div>
 <!-- navbar -->
 	
     <nav class="navbar navbar-inverse">
@@ -164,7 +172,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 <!--temp grid end here-->
 
 <!-- start Text Center -->
@@ -178,7 +185,6 @@
 	</p>
 	<p>&nbsp;</p>
 	</div>
-</center>
 
 <!-- end Text Center -->
 <hr class="ligne" />
@@ -218,7 +224,7 @@
 <!-- start client -->
 
 
-<div class="container clients">
+<div class="clients">
 	  <div class="wrap">
 		 <ul id="flexiselDemo3">
 			<li><img src="img/clients/logo-01.png" /></li>
@@ -250,6 +256,7 @@
 		<span id="toTopHover" style="opacity: 1;"> </span>
 	</a>
 </div>
+</div>
 <!--copyright end here-->
 
 	<!-- Scripts -->
@@ -263,6 +270,7 @@
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
 	<script src="js/jquery.flexisel.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
 	
 	<script>
 		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
@@ -338,6 +346,14 @@
 		    	}
 		    });
 		
+			$(document).ready(function() {  
+			    $("html").niceScroll({
+			    	cursorcolor: "#FB7A08",
+			    	zindex: 10,
+			    	cursorwidth: "8px"
+			    });
+			});
+
 		    /*
 			var defaults = {
 	  			containerID: 'toTop', // fading element id
@@ -354,9 +370,15 @@
 
 
 			$().UItoTop({ easingType: 'easeOutQuart' });
-		   
+
 		});
 
+		$(window).load(function(){
+
+			$(".loading .sk-folding-cube").fadeOut(3000, function (){
+				$(this).parent().fadeOut(2000);
+			})
+		});
 	</script>
 	<!-- End scripts -->
 	
