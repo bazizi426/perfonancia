@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="css/popuo-box.css" media="all">
 	<link rel="stylesheet" href="css/flexisel-style.css" media="all">
 	<link rel="stylesheet" href="css/custom.css" media="all">
+	<!-- <link rel="stylesheet" href="css/loading.css" media="all"> -->
 
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
@@ -25,14 +26,6 @@
 
 <body>
 
-<div class="loading">
-	<div class="sk-folding-cube">
-	  <div class="sk-cube1 sk-cube"></div>
-	  <div class="sk-cube2 sk-cube"></div>
-	  <div class="sk-cube4 sk-cube"></div>
-	  <div class="sk-cube3 sk-cube"></div>
-	</div>
-</div>
 <!-- navbar -->
 	
     <nav class="navbar navbar-inverse">
@@ -55,12 +48,36 @@
         <div id="navbar" class="navbar-collapse collapse my-collapse navbar-right">
 
           <ul class="nav navbar-nav">
-          	<li><a class="active scroll" href="#">Accueil</a></li>
-			<li><a class="scroll" href="#">Qui sommes nous</a></li>
-			<li><a class="scroll" href="#">Nos métiers</a></li>
-			<li><a class="scroll" href="#">Blocs</a></li>
-			<li><a class="scroll" href="#">Postuler</a></li>
-			<li><a class="scroll" href="#">Contactez nous</a></li>
+          	<li>
+				<a class="active scroll" href="index.html">
+					<span class="bracket-before">[</span>Accueil<span class="bracket-after">]</span>
+				</a>
+			</li>
+			<li>
+				<a class="scroll" href="qui-sommes-nous.html">
+					<span class="bracket-before">[</span>Qui sommes nous<span class="bracket-after">]</span>
+				</a>
+			</li>
+			<li>
+				<a class="scroll" href="nos-metiers.html">
+					<span class="bracket-before">[</span>Nos métiers<span class="bracket-after">]</span>
+				</a>
+			</li>
+			<li>
+				<a class="scroll" href="#">
+					<span class="bracket-before">[</span>Blocs<span class="bracket-after">]</span>
+				</a>
+			</li>
+			<li>
+				<a class="scroll" href="#">
+					<span class="bracket-before">[</span>Postulez<span class="bracket-after">]</span>
+				</a>
+			</li>
+			<li>
+				<a class="scroll" href="#">
+					<span class="bracket-before">[</span>Contactez nous<span class="bracket-after">]</span>
+				</a>
+			</li>
           </ul>
         </div><!--/.nav-collapse -->
     	</div>
@@ -77,7 +94,7 @@
                 <div class="slide_content">
                     <div class="slide_content_wrap">
                         <!-- Text title -->
-                        <h4 class="title">OPÉRATEUR INTERNATIONAL DE CENTRES D'APPELS</h4>
+                        <h1 class="title">OPÉRATEUR INTERNATIONAL DE CENTRES D'APPELS</h1>
                         <!-- /Text title -->
                         
                         <!-- Text description -->
@@ -95,9 +112,9 @@
                 <img src="img/slider2.jpg">
                 <div class="slide_content">
                     <div class="slide_content_wrap">
-                        <h4 class="title">
+                        <h1 class="title">
                         	Des Solutions Inshore Et Offshore :(Acquisition, Télémarketing, Service Client, Rétention ...)
-						</h4>
+						</h1>
                         <p class="description">
                         	- Multilingue (français, anglais, italien, allemand, néerlandais, espagnol, etc.)
                         </p>
@@ -197,7 +214,8 @@
 				 <a class="play-icon popup-with-zoom-anim" href="#small-dialog5"> <span class="e"> </span> </a>
 				 <!--video-->
 				<div id="small-dialog5" class="mfp-hide">
-					<iframe src="https://vimeo.com/76268235" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe> 
+					<iframe src="https://player.vimeo.com/video/76268235" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<!-- <iframe src="https://vimeo.com/76268235" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>  -->
 				</div>
 			</div>	
 		 </div>
@@ -269,6 +287,9 @@
 	<script src="js/jquery-hover-effect.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
+	<script>
+	  
+	</script>
 	<script src="js/jquery.flexisel.js"></script>
 	<script src="js/jquery.nicescroll.js"></script>
 	
@@ -277,16 +298,16 @@
 		function hideURLbar(){ window.scrollTo(0,1); }
 
 		$(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
+			// $(".scroll").click(function(event){		
+			// 	event.preventDefault();
+			// 	$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			// });
 			
-			$( "span.menu").click(function() {
-				$(  "ul.res" ).slideToggle("slow", function() {
-					// Animation complete.
-				});
-			});
+			// $( "span.menu").click(function() {
+			// 	$(  "ul.res" ).slideToggle("slow", function() {
+			// 		// Animation complete.
+			// 	});
+			// });
 
 			// Add fancyBox main JS and CSS files
 			$('.popup-with-zoom-anim').magnificPopup({
@@ -371,14 +392,36 @@
 
 			$().UItoTop({ easingType: 'easeOutQuart' });
 
+			$(".scroll").hover(function(){
+				$(this).parent().find('.bracket-before').fadeIn("fast").animate({
+					left: '-3px'
+				});
+
+				$(this).parent().find('.bracket-after').fadeIn("fast").animate({
+					right: '-3px'
+				});
+				// $(this).parent().find('.bracket-before, .bracket-after').animate({
+				// }).fadeIn("fast");
+			}, function(){
+				$(this).parent().find('.bracket-before').fadeOut("fast").animate({
+					left: '3px'
+				});
+
+				$(this).parent().find('.bracket-after').fadeOut("fast").animate({
+					right: '3px'
+				});
+			});
+
+
 		});
 
-		$(window).load(function(){
+		// $(window).load(function(){
 
-			$(".loading .sk-folding-cube").fadeOut(3000, function (){
-				$(this).parent().fadeOut(2000);
-			})
-		});
+		// 	$(".loading .sk-folding-cube").fadeOut(100, function (){
+		// 		$(this).parent().fadeOut(500);
+		// 	})
+		// });
+
 	</script>
 	<!-- End scripts -->
 	
