@@ -2081,8 +2081,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #fff;
-  background-color: #1B242F;
-  border-color: #357ebd;
+  background-color: #848484;
+  border-color: #464646;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2246,7 +2246,7 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger {
   color: #fff;
   background-color: #d9534f;
-  border-color: #d43f3a;
+  border-color: #464646;
 }
 .btn-danger:hover,
 .btn-danger:focus,
